@@ -678,7 +678,7 @@
     #form{}
 
     #form{
-        border:#756241 solid 5px;
+        border:#756241 solid 1px;
         grid-area: form;
         }
 
