@@ -1,0 +1,896 @@
+@charset "UTF-8";
+
+/* browser reset */
+    html,body{
+        margin:0;
+        padding:0;
+    } 
+
+/* ijking */
+    html, container {
+        height: 100%;
+        width:100%;
+    } 
+
+/* algemene settings */ 
+    * {
+      box-sizing: border-box;
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+
+    html {
+        font-family: Verdana, Helvetica, "Lucida Sans", sans-serif;
+        font-size: 1rem;
+        background-color: #d8d5f5;
+    }   
+    h1 {
+        font-family: Papyrus, Georgia, serif;
+        font-weight: bold;
+    }
+    .h1 {
+        font-family: Papyrus, Georgia, serif;
+        font-weight: bold;
+    }
+
+    h2{
+        font-weight:bold;
+        font-size:1rem;
+    }
+
+    /* imgages automatisch doen passen in hun toegewezen grid cell */
+    img {
+        width: 100%;
+        height: auto;   
+    }
+
+
+    /* button to go back top top */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 99;
+            font-size: 18px;
+            border-radius: 4px;
+            border:#ffffe6 solid 2px;
+            color: #ffffe6;
+            background-color: rgb(107, 117, 179, 0.8); 
+            padding: 10px;
+        }
+
+        #myBtn:hover {
+          background-color: #756241;
+        }
+
+
+/* header */ 
+
+    header{
+        background-image: url(img/header51.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: #b8D5f5;
+
+        display:grid;
+        grid-template-columns: repeat(8,12.5%);
+        grid-template-rows: auto minmax(150px,auto);
+        grid-template-areas: 
+            ". logo . nav nav nav nav ."
+            ". . slogan slogan slogan slogan . ."
+            }
+
+   #logo {
+       grid-area: logo;
+       min-width: 140px;
+       padding-top:0.5vw;
+    }
+
+   #logo img {
+       border:#ffffe6 solid 2px; }
+
+    nav {
+        grid-area: nav;
+    }
+
+    nav ul {      
+        margin:0;
+        padding:0.5vw;  
+
+        /*always visible */          
+        position: fixed;
+       
+        /* always on top (stack order) */
+        z-index:1;
+    }
+
+    nav li{
+        display: inline-flex;  
+        min-width: 120px;
+        padding:0.5vw;
+        font-size: calc(10px+0.5vw);
+    
+        background-color: rgb(107, 117, 179, 0.5); 
+        border:#ffffe6 solid 2px;
+        border-radius: 1vw;
+    }
+
+    .nav a:link {
+        color: #ffffe6; 
+    }  
+    .nav a:visited {
+        color: #ffffe6; 
+    }  
+
+    .nav a:hover{
+        color: black;
+    }
+
+/* submenu item 1 nav */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        padding:5px;
+        position: absolute;
+        left:1.5vw;
+        width:auto;
+        color: #ffffe6;
+        background-color: rgb(107, 117, 179, 0.8); 
+        margin-top:0.5vw;
+        font-weight: normal;
+        border:#ffffe6 solid 2px;
+        border-radius: 1vw;
+        min-width: 135px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        text-decoration: none;
+        display: block;
+        margin-bottom:0.5vw
+    }
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+
+
+    /* de huidige actieve pagina highlighten in de navigatiebar */
+   .active {
+        background: rgb(107, 117, 179);
+    }
+
+
+    #slogan {
+        text-align: center;
+        grid-area:slogan;
+        color: #ffffe6;    
+        font-size: 3rem;
+        transform: rotate(-10deg); 
+    }
+
+/* main - for all pages */ 
+    
+     main {
+        color: #756241; 
+        background-color: #ffffe6;
+        display:grid;
+        grid-template-columns: repeat(8,12.5%);
+    }
+
+    /* kleine afstand tussen titels en text */ 
+    main h1{
+        margin-bottom:0;
+        margin-top:0;
+        padding-left:1vw
+    }
+
+    main p{
+        margin-top:5px;
+        padding-left:1vw
+    }
+
+    .description-picture{
+        margin-bottom:10px;
+        padding-left: 1vw;
+        padding-right:1vw
+    }
+
+    .description-text{
+        padding-bottom: 10px;
+        padding-left: 1vw;
+        padding-right:1vw;
+    }
+
+    .description-text h2{
+        margin-top:8px;
+        padding-left: 1vw;
+        padding-right:1vw;
+    }
+
+
+/* main about-us page */ 
+
+    .main-about-us {
+        grid-template-areas: 
+            " . check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 ."  
+            " . check-your-fit2 check-your-fit2 game-foto1 game-foto1 . . . "
+            " . game-foto2 game-foto2 . . game-foto3 game-foto3 . "
+            " . . . game-foto4 game-foto4 . . . " 
+            " . about-us-title1 about-us-title1 about-us-title1 about-us-title1 about-us-title1 about-us-title1 . "
+            " . about-us-text1 about-us-text1 about-us-text1 about-us-picture1 about-us-picture1 about-us-picture1 ."
+            " . about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 . "
+            " . about-us-picture2a about-us-picture2a about-us-picture2a about-us-text2a about-us-text2a about-us-text2a ."
+            " . about-us-text2b about-us-text2b about-us-text2b about-us-picture2b about-us-picture2b about-us-picture2b ."
+            " . about-us-picture2c about-us-picture2c about-us-picture2c about-us-text2c about-us-text2c about-us-text2c."
+            " . about-us-text2d about-us-text2d about-us-text2d about-us-picture2d about-us-picture2d about-us-picture2d ."
+            " . about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3  . "
+            " . about-us-text3 about-us-text3 about-us-text3 about-us-text3 about-us-text3 about-us-text3 ."
+        }   
+
+
+    /* main about-us - section 1 : 4 pictures game */
+
+
+        #check-your-fit1 {
+            grid-area:check-your-fit1;
+            font-size: max(2rem,3vw);
+        }
+
+    
+        #check-your-fit2 {
+            grid-area:check-your-fit2;
+            align-self: center;
+            justify-self: center;
+            font-size: max(2rem,3vw);
+        }
+
+        .gamefoto {
+            box-shadow: 10px 10px 20px 0px rgba(0,0,0,1);
+            background-color: dimgrey;   
+        }
+
+        .foto-uitleg {
+            width: 100%;
+            height: 100%; 
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding:5px;
+            background:#b8D5f5;
+            color: #6B75B3; 
+            font-size:max(1rem,3vw);
+            text-justify: center;
+            text-align: center;
+        }
+ 
+        .foto-uitleg  p {
+            color: #6B75B3; 
+            margin-top:0;
+            margin-bottom:0;
+        }
+
+        .foto-uitleg  a {    
+            background-color: #6B75B3; 
+            padding:3px;
+            border-radius: 0.3vw;
+            border:#ffffe6 solid 2px;
+            font-size:max(1rem,1.5vw);
+            margin-top:0;
+            margin-bottom:0;
+        }
+
+  
+        #foto-uitleg1 a:link{
+                    color: #ffffe6;
+        }
+        #foto-uitleg1 a:visited{
+                    color: #ffffe6;
+        }
+        #foto-uitleg1 a:hover{
+            color: black
+        }
+
+        #foto-uitleg2 a:link{
+                    color: #ffffe6;
+        }
+        #foto-uitleg2 a:visited{
+                    color: #ffffe6;
+        }
+        #foto-uitleg2 a:hover{
+            color: black
+        }
+
+        #foto-uitleg3 a:link{
+                    color: #ffffe6;
+        }
+        #foto-uitleg3 a:visited{
+                    color: #ffffe6;
+        }
+        #foto-uitleg3 a:hover{
+            color: black
+        }
+
+        #foto-uitleg4 a:link{
+                    color: #ffffe6;
+        }
+        #foto-uitleg4 a:visited{
+                    color: #ffffe6;
+        }
+        #foto-uitleg4 a:hover{
+            color: black
+        }
+
+
+
+        #game-foto1{
+                grid-area: game-foto1;
+                transform: rotate(-5deg);
+            }
+
+        #game-foto1:hover #foto-uitleg1 {
+            display:inline;
+        }
+
+        #game-foto2{
+                grid-area: game-foto2;
+                transform: rotate(5deg);
+        }
+
+        #game-foto2:hover #foto-uitleg2 {
+            display: inline;
+        }
+
+        #game-foto3{
+            grid-area: game-foto3;
+            transform: rotate(-8deg);
+            }
+
+        #game-foto3:hover #foto-uitleg3 {
+            display: inline;     
+        }
+
+        #game-foto4{
+            grid-area: game-foto4;
+             transform: rotate(-10deg);
+            }
+
+        #game-foto4:hover #foto-uitleg4 {
+            display: inline;
+        }
+
+        
+
+    /* main about-us - section 2 : descriptive paragraphs with pictueres*/
+
+
+        #about-us-title1 {
+            grid-area:about-us-title1;
+        }
+        #about-us-text1 {
+            grid-area:about-us-text1;
+        }
+
+        #about-us-picture1 {
+            grid-area:about-us-picture1;
+        }
+
+        #about-us-title2 {
+            grid-area:about-us-title2;
+        }
+
+        #about-us-text2a {
+            grid-area:about-us-text2a;
+        }
+
+        #about-us-picture2a {
+            grid-area:about-us-picture2a;
+        }
+
+        #about-us-text2b {
+            grid-area:about-us-text2b;
+        }
+
+        #about-us-picture2b {
+            grid-area:about-us-picture2b;
+        }
+
+        #about-us-text2c {
+            grid-area:about-us-text2c;
+        }
+
+        #about-us-picture2c {
+            grid-area:about-us-picture2c;
+        }
+
+        #about-us-text2d {
+            grid-area:about-us-text2d;
+        }
+
+        #about-us-picture2d {
+            grid-area:about-us-picture2d;
+        }
+
+        #about-us-title3 {
+            grid-area:about-us-title3;
+        }
+
+        #about-us-text3 {
+            grid-area:about-us-text3;
+        }
+
+        #about-us-picture3 {
+            grid-area:about-us-picture3;
+        }
+
+/* main our-activities page */ 
+
+    .main-our-activities {
+        grid-template-areas: 
+            ". our-activities our-activities our-activities our-activities our-activities our-activities ."  
+            ". title-previous title-previous title-previous title-previous title-previous title-previous  ."  
+            ". img-previous11 img-previous11 img-previous12 img-previous12 subtitle-previous1 subtitle-previous1 ."
+            ". img-previous13 img-previous13 img-previous14 img-previous14 subtitle-previous1 subtitle-previous1 ."
+            ". subtitle-previous2 subtitle-previous2 img-previous21 img-previous21 img-previous22 img-previous22 ."
+            ". subtitle-previous2 subtitle-previous2 img-previous23 img-previous23 img-previous24 img-previous24 ."
+            ". img-previous31 img-previous31 img-previous32 img-previous32 subtitle-previous3 subtitle-previous3 ."
+            ". img-previous33 img-previous33 img-previous34 img-previous34 subtitle-previous3 subtitle-previous3 ."
+            ". subtitle-previous4 subtitle-previous4 img-previous41 img-previous41 img-previous42 img-previous42 ."
+            ". subtitle-previous4 subtitle-previous4 img-previous43 img-previous43 img-previous44 img-previous44 ."
+            ". img-previous51 img-previous51 img-previous52 img-previous52 subtitle-previous5 subtitle-previous5 ."
+            ". img-previous53 img-previous53 img-previous54 img-previous54 subtitle-previous5 subtitle-previous5 ."
+        }  
+    
+    #our-events li {margin-bottom:1vw
+        }
+    #our-activities {
+            grid-area:our-activities;
+        }
+
+    #our-activities p, ul{
+        margin-left:2vw}
+    }
+
+    #our-events img {
+        max-width: 40vw;
+        min-width: 350px;
+        }
+
+    #our-events li img {
+        margin-right: 1vw;
+        margin-top:1vw;
+        margin-bottom:1vw;
+        float:right;
+        width: max(40vw,300px);
+        }
+
+    #title-previous {
+        grid-area:title-previous    }
+
+    .img-previous {
+        padding:0.5vw
+    }
+
+    .subtitle-previous {
+        font-size:2rem;
+        justify-self: center;
+        align-self: center
+    }
+
+    #subtitle-previous1 {
+        grid-area:subtitle-previous1
+    }
+    #img-previous11 {
+        grid-area:img-previous11
+    }
+    #img-previous12 {
+        grid-area:img-previous12 
+    }
+    #img-previous13 {
+        grid-area:img-previous13
+    }
+    #img-previous14 {
+        grid-area:img-previous14
+    }
+
+    #subtitle-previous2 {
+        grid-area:subtitle-previous2
+    }
+    #img-previous21 {
+        grid-area:img-previous21
+    }
+    #img-previous22 {
+        grid-area:img-previous22 
+    }
+    #img-previous23 {
+        grid-area:img-previous23
+    }
+    #img-previous24 {
+        grid-area:img-previous24
+    }
+
+    #subtitle-previous3 {
+        grid-area:subtitle-previous3
+    }
+    #img-previous31 {
+        grid-area:img-previous31
+    }
+    #img-previous32 {
+        grid-area:img-previous32 
+    }
+    #img-previous33 {
+        grid-area:img-previous33
+    }
+    #img-previous34 {
+        grid-area:img-previous34
+    }
+
+    #subtitle-previous4 {
+        grid-area:subtitle-previous4
+    }
+    #img-previous41 {
+        grid-area:img-previous41
+    }
+    #img-previous42 {
+        grid-area:img-previous42 
+    }
+    #img-previous43 {
+        grid-area:img-previous43
+    }
+    #img-previous44 {
+        grid-area:img-previous44
+    }
+
+    #subtitle-previous5 {
+        grid-area:subtitle-previous5
+    }
+    #img-previous51 {
+        grid-area:img-previous51
+    }
+    #img-previous52 {
+        grid-area:img-previous52 
+    }
+    #img-previous53 {
+        grid-area:img-previous53
+    }
+    #img-previous54 {
+        grid-area:img-previous54
+    }
+
+/* main next event */ 
+
+    #main-next-event {
+         grid-template-areas: 
+            ". when-title when-text when-text when-text when-text when-text ."   
+            ". where-title where-text where-text where-text where-text where-text ."   
+            ". venue-title venue-text venue-text venue-text venue-text venue-text  ." 
+            ". who-title who-text who-text who-text who-text who-text   ." 
+            ". cost-title cost-text cost-text cost-text cost-text cost-text ." 
+            ". register-title register-text register-text register-text register-text register-text ." 
+    }
+
+    #main-next-event a:link,a:visited{
+        color:#756241;
+        font-weight:bold;
+    }
+
+    #main-next-event a:hover{
+        color:black;
+        font-weight:bold;
+    }
+
+    #next-event-rego{
+        border:#756241 solid 1px
+    }
+
+    #main-next-event img{
+    width: min(500px, 50vw);
+    float:left;
+    margin-left:1vw;
+    margin-right:1vw;
+    border: #756241 solid 2px;
+    }
+
+    #where-text iframe{
+    padding-left:1vw;
+    margin-top:1vw;
+    }
+
+    .next-event {
+        padding-top:1.5vw;
+    }
+
+    #main-next-event h1 {
+        font-size:max(1.5rem,2vw)
+    }
+
+    #when-title {
+        grid-area: when-title;
+    }
+    #when-text {
+        grid-area: when-text;
+    }
+
+    #where-title {
+        grid-area: where-title;
+    }
+
+    #where-text {
+        grid-area: where-text;
+    }
+
+    #venue-title {
+        grid-area: venue-title;
+    }
+
+    #venue-text {
+        grid-area: venue-text;
+    }
+
+    #who-title {
+        grid-area: who-title;
+    }
+
+    #who-text {
+        grid-area: who-text;
+    }
+
+    #cost-title {
+        grid-area: cost-title;
+    }
+
+    #cost-text {
+        grid-area: cost-text;
+    }
+
+    #register-title {
+        grid-area: register-title;
+    }
+    #register-text {
+        grid-area: register-text;
+    }
+
+
+/* main join us */ 
+
+
+    #join-us{
+         grid-template-areas: 
+            ". join-us-text join-us-text join-us-text join-us-text join-us-text join-us-text ."   
+           }
+    #join-us-text{grid-area: join-us-text;}
+
+    #join-us p, ul {
+        margin-left:2vw}
+    }
+   
+/* main contact-form */ 
+
+    /* raar maar waar... maar als "lege" statement, of eender wat NIET staat voor het volgende, dan heeft het volgende genegeerd bij rendering... */ 
+
+    #form{}
+
+    #form{
+        border:#756241 solid 5px;
+        grid-area: form;
+        }
+
+    #contact-form {grid-template-areas: 
+         ". form form form form form form ."   
+        }
+
+
+/* main faq page */ 
+
+        #main-faq {
+            padding-bottom:1vw;
+            grid-area: 1 / 2 / 1 /-2;
+        }
+
+        .faq-question {
+            margin-top:1vw;
+            margin-bottom:1vw;
+            font-weight:bold
+        }
+
+        .faq-answer {
+           margin-left:2vw;
+        }
+
+        .faq-pic{
+           width: max(25vw,300px);
+            margin-left:2vw;
+        }
+
+
+
+
+/* footer */ 
+    footer {
+        background-color: #6B75B3;
+        display:grid;
+        color:#ffffe6;
+        padding-top:5px;
+        padding-left:2vw;
+        grid-template-columns: repeat(8,12.5%);
+        grid-template-areas: 
+        "footercol1 footercol1 footercol1 footercol2 footercol2 . . ."
+        }
+
+        #footercol1 a:link {color:#ffffe6
+        }
+
+        #footercol1 a:visited {color:#ffffe6
+        }
+
+        #footercol1 a:hover {color:black
+        }
+
+        #footercol1 {
+            grid-area: footercol1;
+        }
+
+        #footercol2 {
+            grid-area: footercol2;
+            display:block;
+        }
+
+        #footercol1 UL {
+            grid-area: footercol1;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        #footercol1 LI {
+            margin-bottom:5px
+        }
+
+        #footercol1 img{
+            max-width: 30px;
+       
+        }
+        #footercol2 img{
+            max-width: 30px;
+            margin:5px;
+        }
+
+
+/* For mobile phones: */
+    @media only screen and (max-width: 500px) 
+    {
+        #slogan {
+            font-size: 2rem;}
+        
+        #logo {
+            margin-left:1vw
+        }
+        
+        #check-your-fit1, #check-your-fit2{
+            font-size: 20px;
+        }
+        
+
+        
+    }
+
+
+    @media only screen and (max-width: 800px) 
+    {
+       
+        header {
+        grid-template-areas: 
+        "logo logo logo nav . . . . " 
+        ". . slogan slogan slogan slogan . . "}
+                #logo img {
+            max-width: 150px;
+        }
+        
+        .main-about-us {
+            grid-template-areas: 
+                "check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1 check-your-fit1"  
+                "check-your-fit2 check-your-fit2 game-foto1 game-foto1 game-foto1 . . . "
+                "game-foto2 game-foto2 game-foto2 . . game-foto3 game-foto3 game-foto3"
+                ". .  .game-foto4 game-foto4 game-foto4  . . " 
+                "about-us-title1 about-us-title1 about-us-title1 about-us-title1 about-us-title1 about-us-title1 . ."
+                "about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 "
+                "about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 "
+                "about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2"
+                " about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a"
+                " about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b"
+                "  about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c"
+                " about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d"
+                "about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3"
+                " about-us-text3  about-us-text3 about-us-text3 about-us-text3 about-us-text3  about-us-text3 about-us-text3 about-us-text3"
+        }
+              
+        
+        #foto-uitleg1 p {
+            font-size:max(12px,3vw);
+            margin-bottom: 3vw}
+        #foto-uitleg1 a {
+            font-size:max(12px,3vw);
+        }
+        #foto-uitleg2 p {
+            font-size:max(12px,3vw);
+            margin-bottom: 3vw}
+        #foto-uitleg2 a {
+            font-size:max(12px,3vw);
+        }
+        #foto-uitleg3 p {
+            font-size:max(12px,3vw);
+            margin-bottom: 3vw}
+        #foto-uitleg3 a {
+            font-size:max(12px,3vw);
+        }
+         #foto-uitleg4 p {
+            font-size:max(12px,3vw);
+            margin-bottom: 3vw}
+        #foto-uitleg4 a {
+            font-size:max(12px,3vw);
+        }
+        
+
+  
+        
+            .main-our-activities {
+        grid-template-areas: 
+            "our-activities our-activities our-activities our-activities our-activities our-activities our-activities our-activities"  
+            "title-previous title-previous title-previous title-previous title-previous title-previous title-previous title-previous " 
+            "subtitle-previous1 subtitle-previous1 img-previous11 img-previous11 img-previous11 img-previous12 img-previous12 img-previous12"
+            "subtitle-previous1 subtitle-previous1 img-previous13 img-previous13 img-previous13 img-previous14 img-previous14 img-previous14"
+            "img-previous21 img-previous21 img-previous21 img-previous22 img-previous22 img-previous22 subtitle-previous2 subtitle-previous2 "
+            "img-previous23 img-previous23 img-previous23 img-previous24 img-previous24 img-previous24 subtitle-previous2 subtitle-previous2 "
+            "subtitle-previous3 subtitle-previous3 img-previous31 img-previous31 img-previous31 img-previous32 img-previous32 img-previous32"
+            "subtitle-previous3 subtitle-previous3 img-previous33 img-previous33 img-previous33 img-previous34 img-previous34 img-previous34"
+             "img-previous41 img-previous41 img-previous41 img-previous42 img-previous42 img-previous42 subtitle-previous4 subtitle-previous4 "
+            "img-previous43 img-previous43 img-previous43 img-previous44 img-previous44 img-previous44 subtitle-previous4 subtitle-previous4 "
+            "subtitle-previous5 subtitle-previous5 img-previous51 img-previous51 img-previous51 img-previous52 img-previous52 img-previous52"
+            "subtitle-previous5 subtitle-previous5 img-previous53 img-previous53 img-previous53 img-previous54 img-previous54 img-previous54"
+
+        }  
+        
+                #main-next-event {
+         grid-template-areas: 
+            "when-title when-title when-text when-text when-text when-text when-text  when-text"   
+            "where-title where-title where-text where-text where-text where-text where-text where-text"   
+            "venue-title  venue-title venue-text venue-text venue-text venue-text venue-text  venue-text" 
+            "who-title who-title who-text who-text who-text who-text who-text  who-text" 
+            "cost-title  cost-title cost-text cost-text cost-text cost-text cost-text cost-text " 
+            "register-title  register-title register-text register-text register-text register-text register-text register-text " 
+        }
+        
+         #join-us{
+         grid-template-areas: 
+            "join-us-text  join-us-text join-us-text join-us-text join-us-text join-us-text join-us-text join-us-text "   
+         }
+        
+        #contact-form{
+             grid-template-areas: 
+                "form form form form form form form form"   
+            }
+        
+        #main-faq {
+            padding-left:3vw;
+            padding-right:3vw;
+            grid-area: 1 /1 /1 /last;
+        }
+        
+        footer {
+            grid-template-areas: 
+                "footercol1 footercol1 footercol1 footercol1 footercol1  footercol1  footercol1 footercol1 "
+                "footercol2 footercol2 footercol2 footercol2 footercol2 footercol2 footercol2 footercol2 "}
+
+        #footercol1 UL{padding-left:3vw;}
+        }
+}
+
+           
+
+

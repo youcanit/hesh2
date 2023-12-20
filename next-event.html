@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HESH next event</title>
+    <meta charset="utf-8">
+    <!-- essential for responsive websites --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+    
+    <!-- scripts te include om bepaalde stukken HTML code te kunnen hergebruiken bvb header, footer - bron :  https://medium.com/@AmyScript/how-to-reduce-reuse-and-recycle-your-code-389e6742e4ac#:~:text=Save%20the%20code%20you%20wish,and%20saved%20it%20as%20reuseheader -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>$(function(){$('#header').load('header.html');});</script>  
+    <script>$(function(){$('#footer').load('footer.html');});</script>  
+    <script>$(function(){$('#top-button-script').load('top-button-script.html');});</script>  
+    <script>$(function(){document.body.scrollTop = 0;});</script>
+</head>
+    
+<body>
+
+    
+    <div id=container>
+    
+       <header id="header">
+       </header>
+    
+        <main id="main-next-event" > 
+            
+            <h1 id="when-title" > When? </h1>
+
+            <div id="when-text">
+                 <h2 > Friday May 16th - Sunday May 18th 2025.</h2> <p>Save the date!</p>
+            </div>
+           
+            <h1 id="where-title"> Where? </h1>
+            <div id="where-text">
+                 <h2> Bruges, Belgium. The Venice of the north!</h2>
+                <img src="img/bruges.jpg" width="1200" height="900" alt="Bruges">
+                <p>Bruges has a rich history, it's center is Unesco world heritage.  It's a vibrant city with lots of culture like festivals, museums.  It's probably the most famous Belgian city, known world-wide.  Before and/or after our event, you can use it as a base to visit things in the area, such as the Belgian coast (which is nearby), nature reserves (the Zwin) , other famous cities like Brussels (European capital), cosmopolitan Antwerp, historic Ghent.  You can also do nature trekking, for example in the Ardennes.  Everything in Belgium is close because Belgium is a rather small country.    </p>
+                
+                <p>You can find detailed information          <a href="https://www.visitbruges.be/en"  target="_blank">HERE</a> </p> 
+                
+                <iframe id="map-bruges" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2499.5362710827267!2d3.222781!3d51.209196!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2sbe!4v1703016605767!5m2!1snl!2sbe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <h1 id="venue-title" class="next-event"> Venue? </h1>
+            <div id="venue-text" class="next-event">
+                <p> De hotel where we will stay is still to be decided.  It will be updated here, as soon as it is known. </p>
+            </div>
+            <h1 id="who-title" class="next-event"> Who? </h1>
+            <div id="who-text" class="next-event">
+                <p> This time, the event will be organized by Peter and Ziba, who lived a few years in Bruges.  Peter is even a certified official guide of Bruges.  We can't wish better for an exceptional unique experience! </p>
+            </div>
+            <h1 id="cost-title" class="next-event"> Cost? </h1>
+            <div id="cost-text" class="next-event">
+                <p> The rego fee is currently unknown. 
+                It will be updated here, as soon as we have made a program and based on that can make a cost estimation.   Based on previous editions, count on about 350 to 400 euro per person, for the whole weekend, inclusive of 2 nights in our HESH-hotel. </p>
+            </div>
+            <h1 id="register-title" class="next-event" > Rego? </h1>
+            <div id="register-text" class="next-event">
+                <p> <strong> Registrations are NOT yet open.  This section will be updated beginning 2025! </strong> </p>
+                <p>You are duly registered when you have done 2 things: </p>
+                <ul>
+                    <li> Fill out below form. </li>
+                    <li> Transfer the due amount on this account ... (will be added when registrations are open beginning of 2025).</li>
+                </ul>
+                <div id="next-event-rego"> 
+                    
+                    <!--  below was code copied form jotform for this form I have created there --> 
+
+                    <iframe
+                      id="JotFormIFrame-233523673290355"
+                      title="Registration form HESH 2025 in Bruges"
+                      onload="window.parent.scrollTo(0,0)"
+                      allowtransparency="true"
+                      allowfullscreen="true"
+                      allow="geolocation; microphone; camera"
+                      src="https://form.jotform.com/233523673290355"
+                      frameborder="0"
+                      style="min-width:100%;max-width:100%;height:539px;border:none;"
+                      scrolling="no"
+                    >
+                    </iframe>
+                    <script type="text/javascript">
+                    var ifr = document.getElementById("JotFormIFrame-233523673290355");
+                    if (ifr) {
+                      var src = ifr.src;
+                      var iframeParams = [];
+                      if (window.location.href && window.location.href.indexOf("?") > -1) {
+                        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                      }
+                      if (src && src.indexOf("?") > -1) {
+                        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                        src = src.substr(0, src.indexOf("?"))
+                      }
+                      iframeParams.push("isIframeEmbed=1");
+                      ifr.src = src + "?" + iframeParams.join('&');
+                    }
+                    window.handleIFrameMessage = function(e) {
+                      if (typeof e.data === 'object') { return; }
+                      var args = e.data.split(":");
+                      if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+                      if (!iframe) { return; }
+                      switch (args[0]) {
+                        case "scrollIntoView":
+                          iframe.scrollIntoView();
+                          break;
+                        case "setHeight":
+                          iframe.style.height = args[1] + "px";
+                          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+                            iframe.style.minHeight = args[1] + "px";
+                          }
+                          break;
+                        case "collapseErrorPage":
+                          if (iframe.clientHeight > window.innerHeight) {
+                            iframe.style.height = window.innerHeight + "px";
+                          }
+                          break;
+                        case "reloadPage":
+                          window.location.reload();
+                          break;
+                        case "loadScript":
+                          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+                          var src = args[1];
+                          if (args.length > 3) {
+                              src = args[1] + ':' + args[2];
+                          }
+                          var script = document.createElement('script');
+                          script.src = src;
+                          script.type = 'text/javascript';
+                          document.body.appendChild(script);
+                          break;
+                        case "exitFullscreen":
+                          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+                          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+                          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+                          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+                          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+                          break;
+                      }
+                      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+                        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+                      }
+                    };
+                    window.isPermitted = function(originUrl, whitelisted_domains) {
+                      var url = document.createElement('a');
+                      url.href = originUrl;
+                      var hostname = url.hostname;
+                      var result = false;
+                      if( typeof hostname !== 'undefined' ) {
+                        whitelisted_domains.forEach(function(element) {
+                            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                                result = true;
+                            }
+                        });
+                        return result;
+                      }
+                    };
+                    if (window.addEventListener) {
+                      window.addEventListener("message", handleIFrameMessage, false);
+                    } else if (window.attachEvent) {
+                      window.attachEvent("onmessage", handleIFrameMessage);
+                    }
+                    </script>
+                </div> <!-- end of div "next-event-rego" --> 
+            </div>  <!-- end of div "register text" --> 
+            
+        </main>
+
+        <footer id="footer">
+        </footer>
+        
+      </div> <!-- end of container-->
+    
+    <div id="top-button-script">
+    </div>
+    
+</body>
+</html>
