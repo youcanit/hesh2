@@ -780,7 +780,7 @@
        
         header {
         grid-template-areas: 
-        "logo logo logo . nav nav nav nav " 
+        "logo logo logo . . nav nav nav " 
          ". slogan slogan slogan slogan slogan . . "}
         
         #logo img {
