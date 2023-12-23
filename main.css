@@ -573,6 +573,7 @@
             ". who-title who-text who-text who-text who-text who-text   ." 
             ". cost-title cost-text cost-text cost-text cost-text cost-text ." 
             ". register-title register-text register-text register-text register-text register-text ." 
+            ". .  next-event-rego next-event-rego next-event-rego next-event-rego next-event-rego  ." 
     }
 
     #main-next-event a:link,a:visited{
@@ -654,6 +655,10 @@
     }
     #register-text {
         grid-area: register-text;
+    }
+
+    #next-event-rego {
+        grid-area: next-event-rego;
     }
 
 
@@ -777,12 +782,14 @@
         
         /* our activities */ 
         .subtitle-previous {font-size:5vw}
-        }
-
+        
+        
+        
         /* next event */ 
-    #main-next-event h1 {
-        font-size:1.2rem
-    }
+        #main-next-event h1 {
+            font-size:1.2rem
+        }
+        }
 
 
     @media only screen and (max-width: 600px) 
@@ -879,6 +886,7 @@
             "who-title who-title who-text who-text who-text who-text who-text  who-text" 
             "cost-title  cost-title cost-text cost-text cost-text cost-text cost-text cost-text " 
             "register-title  register-title register-text register-text register-text register-text register-text register-text " 
+            "next-event-rego next-event-rego next-event-rego next-event-rego next-event-rego next-event-rego next-event-rego next-event-rego" 
         }
         
          #join-us{
