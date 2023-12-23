@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF-8"; 
 
 /* browser reset */
     html,body{
@@ -96,7 +96,7 @@
         grid-area: nav;
     }
 
-    nav ul {      
+    nav ul{      
         margin:0;
         padding:0.5vw;  
 
@@ -158,7 +158,6 @@
     }
 
     .dropdown:hover .dropdown-content {display: block;}
-
 
 
     /* de huidige actieve pagina highlighten in de navigatiebar */
@@ -758,7 +757,7 @@
         }
         #footercol2 img{
             max-width: 30px;
-            margin:5px;
+            margin-left:10px;
         }
 
 
@@ -767,30 +766,35 @@
     {
         #slogan {
             font-size: 2rem;}
-        
-        #logo {
-            margin-left:1vw
-        }
-        
+
         #check-your-fit1, #check-your-fit2{
             font-size: 20px;
         }
         
-
-        
+        .subtitle-previous {font-size:5vw}
     }
 
 
-    @media only screen and (max-width: 800px) 
+    @media only screen and (max-width: 600px) 
     {
        
         header {
         grid-template-areas: 
-        "logo logo logo nav . . . . " 
-        ". . slogan slogan slogan slogan . . "}
-                #logo img {
-            max-width: 150px;
+        "logo logo logo . nav nav nav nav " 
+         ". slogan slogan slogan slogan slogan . . "}
+        
+        #logo img {
+            max-width: 120px;
+            margin-left:1vw
         }
+    
+        
+      nav ul{      
+        /* not anymore always visible */          
+        position: relative;
+
+        }
+
         
         .main-about-us {
             grid-template-areas: 
@@ -802,10 +806,14 @@
                 "about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 about-us-text1 "
                 "about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 about-us-picture1 "
                 "about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2 about-us-title2"
-                " about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a"
-                " about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b"
-                "  about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c"
-                " about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d"
+                " about-us-text2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a about-us-text2a"
+                " about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a about-us-picture2a "
+                " about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-text2b about-us-text2b "
+                 " about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b about-us-picture2b"
+                "  about-us-text2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c about-us-text2c"
+                "  about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c about-us-picture2c"
+                " about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-text2d about-us-text2d "
+                " about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d about-us-picture2d"
                 "about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3 about-us-title3"
                 " about-us-text3  about-us-text3 about-us-text3 about-us-text3 about-us-text3  about-us-text3 about-us-text3 about-us-text3"
         }
@@ -836,10 +844,7 @@
             font-size:max(12px,3vw);
         }
         
-
-  
-        
-            .main-our-activities {
+        .main-our-activities {
         grid-template-areas: 
             "our-activities our-activities our-activities our-activities our-activities our-activities our-activities our-activities"  
             "title-previous title-previous title-previous title-previous title-previous title-previous title-previous title-previous " 
@@ -856,7 +861,7 @@
 
         }  
         
-                #main-next-event {
+        #main-next-event {
          grid-template-areas: 
             "when-title when-title when-text when-text when-text when-text when-text  when-text"   
             "where-title where-title where-text where-text where-text where-text where-text where-text"   
