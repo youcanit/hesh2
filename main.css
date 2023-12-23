@@ -764,14 +764,24 @@
 /* For mobile phones: */
     @media only screen and (max-width: 500px) 
     {
+        
+        /* header */ 
         #slogan {
             font-size: 2rem;}
+        
+        /* about us */ 
 
         #check-your-fit1, #check-your-fit2{
             font-size: 20px;
         }
         
+        /* our activities */ 
         .subtitle-previous {font-size:5vw}
+        }
+
+        /* next event */ 
+    #main-next-event h1 {
+        font-size:1.2rem
     }
 
 
