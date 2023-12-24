@@ -112,7 +112,6 @@
         min-width: 120px;
         padding:0.5vw;
         font-size: calc(10px+0.5vw);
-    
         background-color: rgb(107, 117, 179, 0.5); 
         border:#ffffe6 solid 2px;
         border-radius: 1vw;
@@ -326,8 +325,6 @@
         #foto-uitleg4 a:hover{
             color: black
         }
-
-
 
         #game-foto1{
                 grid-area: game-foto1;
@@ -712,8 +709,6 @@
            width: max(25vw,300px);
             margin-left:2vw;
         }
-
-
 
 
 /* footer */ 
